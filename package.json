@@ -1,0 +1,24 @@
+{
+  "name": "heph-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Heph monorepo",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "tsdown": "^0.22.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.0.7",
+      "onFail": "download"
+    }
+  }
+}

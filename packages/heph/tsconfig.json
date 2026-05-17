@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@heph/cli": ["../cli/src/index.ts"],
+      "@heph/core": ["../core/src/index.ts"],
+      "@heph/server-hono": ["../server-hono/src/index.ts"],
+      "@heph/sqlite": ["../sqlite/src/index.ts"],
+      "@heph/worker": ["../worker/src/index.ts"]
+    },
+    "types": ["node"],
+    "rootDir": "../",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.ts"]
+}

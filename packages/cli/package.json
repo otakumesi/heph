@@ -1,0 +1,31 @@
+{
+  "name": "@heph/cli",
+  "version": "0.0.1",
+  "private": true,
+  "description": "CLI scaffold and inspection commands for Heph",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@heph/core": "workspace:*",
+    "jiti": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsdown": "^0.22.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}

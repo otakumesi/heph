@@ -1,0 +1,67 @@
+{
+  "name": "@otakumesi/heph",
+  "version": "0.0.2-alpha.0",
+  "description": "Forge stateful AI agents in your Hono app.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./core": {
+      "types": "./dist/core.d.mts",
+      "import": "./dist/core.mjs"
+    },
+    "./hono": {
+      "types": "./dist/hono.d.mts",
+      "import": "./dist/hono.mjs"
+    },
+    "./mcp": {
+      "types": "./dist/mcp.d.mts",
+      "import": "./dist/mcp.mjs"
+    },
+    "./sqlite": {
+      "types": "./dist/sqlite.d.mts",
+      "import": "./dist/sqlite.mjs"
+    },
+    "./skills": {
+      "types": "./dist/skills.d.mts",
+      "import": "./dist/skills.mjs"
+    },
+    "./worker": {
+      "types": "./dist/worker.d.mts",
+      "import": "./dist/worker.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "heph": "dist/cli.mjs"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.5.0",
+    "hono": "^4.10.7",
+    "jiti": "^2.7.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@heph/cli": "workspace:*",
+    "@heph/core": "workspace:*",
+    "@heph/server-hono": "workspace:*",
+    "@heph/sqlite": "workspace:*",
+    "@heph/worker": "workspace:*",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.10.1",
+    "tsdown": "^0.22.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}
